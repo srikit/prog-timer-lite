@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CH340G
+D USB to serial chip
+F https://www.mpja.com/download/35227cpdata.pdf
+$ENDCMP
+#
+#End Doc Library

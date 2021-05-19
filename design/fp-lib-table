@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name PROG-TIMER)(type KiCad)(uri /home/dilshan/projects/prog-timer-lite/prog-timer-lite/prog-timer-lite--footprint.pretty)(options "")(descr ""))
+)

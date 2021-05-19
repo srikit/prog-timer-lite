@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name CH340)(type Legacy)(uri /home/dilshan/projects/prog-timer-lite/prog-timer-lite/usb-ch34x.lib)(options "")(descr ""))
+  (lib (name prog-timer-lite-rescue)(type Legacy)(uri ${KIPRJMOD}/prog-timer-lite-rescue.lib)(options "")(descr ""))
+)

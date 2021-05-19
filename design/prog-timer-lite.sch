@@ -1,0 +1,267 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title "Programmable Timer - Lite"
+Date "2020-11-25"
+Rev "1.0.0"
+Comp "SRIKit"
+Comment1 "KT0003"
+Comment2 "Dilshan R Jayakody"
+Comment3 "https://github.com/srikit/prog-timer-lite"
+Comment4 "https://srikit.net"
+$EndDescr
+$Comp
+L Regulator_Linear:AMS1117-3.3 U101
+U 1 1 5FC1BB27
+P 3900 1750
+F 0 "U101" H 3900 1992 50  0000 C CNN
+F 1 "AMS1117-3.3" H 3900 1901 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 3900 1950 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 4000 1500 50  0001 C CNN
+	1    3900 1750
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 8150 1350 2100 950 
+U 5FC1E470
+F0 "prog-timer-mcu.sch" 50
+F1 "prog-timer-mcu.sch" 50
+$EndSheet
+$Comp
+L Device:C C102
+U 1 1 5FC68198
+P 3100 2150
+F 0 "C102" H 3215 2196 50  0000 L CNN
+F 1 "0.1MFD" H 3215 2105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3138 2000 50  0001 C CNN
+F 3 "~" H 3100 2150 50  0001 C CNN
+	1    3100 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C101
+U 1 1 5FC68A9F
+P 2400 2150
+F 0 "C101" H 2515 2196 50  0000 L CNN
+F 1 "10MFD" H 2515 2105 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 2400 2150 50  0001 C CNN
+F 3 "~" H 2400 2150 50  0001 C CNN
+	1    2400 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C103
+U 1 1 5FC68CD8
+P 4700 2150
+F 0 "C103" H 4815 2196 50  0000 L CNN
+F 1 "4.7MFD" H 4815 2105 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 4700 2150 50  0001 C CNN
+F 3 "~" H 4700 2150 50  0001 C CNN
+	1    4700 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5FC69649
+P 3900 2450
+F 0 "#PWR0106" H 3900 2200 50  0001 C CNN
+F 1 "GND" H 3905 2277 50  0000 C CNN
+F 2 "" H 3900 2450 50  0001 C CNN
+F 3 "" H 3900 2450 50  0001 C CNN
+	1    3900 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5FC69744
+P 4700 2450
+F 0 "#PWR0108" H 4700 2200 50  0001 C CNN
+F 1 "GND" H 4705 2277 50  0000 C CNN
+F 2 "" H 4700 2450 50  0001 C CNN
+F 3 "" H 4700 2450 50  0001 C CNN
+	1    4700 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5FC699A6
+P 3100 2450
+F 0 "#PWR0104" H 3100 2200 50  0001 C CNN
+F 1 "GND" H 3105 2277 50  0000 C CNN
+F 2 "" H 3100 2450 50  0001 C CNN
+F 3 "" H 3100 2450 50  0001 C CNN
+	1    3100 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5FC69CE6
+P 2400 2450
+F 0 "#PWR0103" H 2400 2200 50  0001 C CNN
+F 1 "GND" H 2405 2277 50  0000 C CNN
+F 2 "" H 2400 2450 50  0001 C CNN
+F 3 "" H 2400 2450 50  0001 C CNN
+	1    2400 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 2000 2400 1750
+Wire Wire Line
+	2400 1750 3100 1750
+Wire Wire Line
+	3100 2000 3100 1750
+Connection ~ 3100 1750
+Wire Wire Line
+	3100 1750 3600 1750
+Wire Wire Line
+	3100 2450 3100 2300
+Wire Wire Line
+	2400 2450 2400 2300
+Wire Wire Line
+	3900 2450 3900 2050
+Wire Wire Line
+	4200 1750 4700 1750
+Wire Wire Line
+	4700 1750 4700 2000
+Wire Wire Line
+	4700 2300 4700 2450
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5FC6CB7D
+P 3100 1450
+F 0 "#FLG0101" H 3100 1525 50  0001 C CNN
+F 1 "PWR_FLAG" H 3100 1623 50  0000 C CNN
+F 2 "" H 3100 1450 50  0001 C CNN
+F 3 "~" H 3100 1450 50  0001 C CNN
+	1    3100 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 1450 3100 1750
+$Comp
+L Connector_Generic:Conn_01x02 J101
+U 1 1 5FC6D041
+P 1700 1750
+F 0 "J101" H 1618 1967 50  0000 C CNN
+F 1 "DC-IN" H 1618 1876 50  0000 C CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical" H 1700 1750 50  0001 C CNN
+F 3 "~" H 1700 1750 50  0001 C CNN
+	1    1700 1750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5FC6F33E
+P 2050 2450
+F 0 "#PWR0101" H 2050 2200 50  0001 C CNN
+F 1 "GND" H 2055 2277 50  0000 C CNN
+F 2 "" H 2050 2450 50  0001 C CNN
+F 3 "" H 2050 2450 50  0001 C CNN
+	1    2050 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 1850 2050 1850
+Wire Wire Line
+	2050 1850 2050 2450
+Wire Wire Line
+	1900 1750 2400 1750
+Connection ~ 2400 1750
+$Comp
+L power:+3V3 #PWR0107
+U 1 1 5FC6FDE8
+P 4700 1450
+F 0 "#PWR0107" H 4700 1300 50  0001 C CNN
+F 1 "+3V3" H 4715 1623 50  0000 C CNN
+F 2 "" H 4700 1450 50  0001 C CNN
+F 3 "" H 4700 1450 50  0001 C CNN
+	1    4700 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 1450 4700 1750
+Connection ~ 4700 1750
+$Comp
+L Mechanical:MountingHole_Pad H101
+U 1 1 5FC74B15
+P 2050 4400
+F 0 "H101" H 2150 4449 50  0000 L CNN
+F 1 "M3 - MountingHole" H 2150 4358 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm_Pad" H 2050 4400 50  0001 C CNN
+F 3 "~" H 2050 4400 50  0001 C CNN
+	1    2050 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H102
+U 1 1 5FC750EA
+P 3400 4400
+F 0 "H102" H 3500 4449 50  0000 L CNN
+F 1 "M3 - MountingHole" H 3500 4358 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm_Pad" H 3400 4400 50  0001 C CNN
+F 3 "~" H 3400 4400 50  0001 C CNN
+	1    3400 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5FC75533
+P 2050 4850
+F 0 "#PWR0102" H 2050 4600 50  0001 C CNN
+F 1 "GND" H 2055 4677 50  0000 C CNN
+F 2 "" H 2050 4850 50  0001 C CNN
+F 3 "" H 2050 4850 50  0001 C CNN
+	1    2050 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5FC7584F
+P 3400 4850
+F 0 "#PWR0105" H 3400 4600 50  0001 C CNN
+F 1 "GND" H 3405 4677 50  0000 C CNN
+F 2 "" H 3400 4850 50  0001 C CNN
+F 3 "" H 3400 4850 50  0001 C CNN
+	1    3400 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 4850 3400 4500
+Wire Wire Line
+	2050 4500 2050 4850
+$Comp
+L Mechanical:MountingHole_Pad H103
+U 1 1 5FC7CC97
+P 4700 4400
+F 0 "H103" H 4800 4449 50  0000 L CNN
+F 1 "M3 - MountingHole" H 4800 4358 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm_Pad" H 4700 4400 50  0001 C CNN
+F 3 "~" H 4700 4400 50  0001 C CNN
+	1    4700 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5FC7D165
+P 4700 4850
+F 0 "#PWR0109" H 4700 4600 50  0001 C CNN
+F 1 "GND" H 4705 4677 50  0000 C CNN
+F 2 "" H 4700 4850 50  0001 C CNN
+F 3 "" H 4700 4850 50  0001 C CNN
+	1    4700 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 4500 4700 4850
+$Sheet
+S 8150 2750 2100 950 
+U 5FBE0212
+F0 "prog-timer-dev" 50
+F1 "prog-timer-dev.sch" 50
+$EndSheet
+Text Notes 2000 4000 0    50   ~ 0
+PLACE 2 MOUNTHING HOLES NEAR TO THE USB SOCKET
+$EndSCHEMATC
