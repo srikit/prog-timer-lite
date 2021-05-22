@@ -11,7 +11,7 @@ The alarm terminal of this module is available as an open-collector output.
 
 This module is specifically developed to handle long-duration alarm configurations which can span up to years. 
 
-This is an open-source hardware project. All the design files, documentation, and firmware source code are available to download at the project source repository. Content of this project is distributed under the terms of the following license:
+This is an open-source hardware project. All the design files, [documentation](https://github.com/srikit/prog-timer-lite/wiki), and firmware source code are available to download at the project source repository. Content of this project is distributed under the terms of the following license:
 
 - Hardware License: [CERN-OHL-W](https://opensource.org/CERN-OHL-W)
 - Software License: [GNU GPL 3.0](https://github.com/srikit/prog-timer-lite/blob/main/LICENSE)
