@@ -1,4 +1,7 @@
 # Programmable Timer Module - Lite Version
+![KT0003](https://img.shields.io/badge/ID-KT0003-orange)
+
+![Timer Module PCB](https://raw.githubusercontent.com/srikit/prog-timer-lite/main/resources/images/prog-timer-lite-main.jpg)
 
 Programmable timer lite is a miniature, USB programmable timer module. This module can handle more than 100 alarm configurations and trigger the output channel based on the programmed conditions. The timer module can program using SRIKit's [*Timer Controller*](https://github.com/srikit/timer-controller) software. 
 
@@ -13,4 +16,3 @@ This is an open-source hardware project. All the design files, documentation, an
 - Hardware License: [CERN-OHL-W](https://opensource.org/CERN-OHL-W)
 - Software License: [GNU GPL 3.0](https://github.com/srikit/prog-timer-lite/blob/main/LICENSE)
 - Documentation License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0)
-
