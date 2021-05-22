@@ -1,4 +1,5 @@
 # Programmable Timer Module - Lite Version
+![KT0003](https://img.shields.io/badge/ID-KT0003-orange)
 
 ![Timer Module PCB](https://raw.githubusercontent.com/srikit/prog-timer-lite/main/resources/images/prog-timer-lite-main.jpg)
 
