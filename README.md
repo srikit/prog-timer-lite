@@ -1,6 +1,6 @@
 # Programmable Timer Module - Lite Version
 
-Programmable timer lite is a miniature, USB programmable timer module. This module can handle more than 100 alarm configurations and trigger the output channel based on the programmed conditions. The timer module can program using SRIKit's *Timer Programmer* software. 
+Programmable timer lite is a miniature, USB programmable timer module. This module can handle more than 100 alarm configurations and trigger the output channel based on the programmed conditions. The timer module can program using SRIKit's [*Timer Controller*](https://github.com/srikit/timer-controller) software. 
 
 This module is designed around the *STM8S001J3M* microcontroller and *DS3231* real-time clock. *AMS1117-3.3* regulator in this module can handle a maximum of 9V DC input without installing an external heatsink. 
 
