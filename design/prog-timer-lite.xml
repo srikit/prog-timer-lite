@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/dilshan/projects/srikit-git/prog-timer-lite/design/prog-timer-lite.sch</source>
+    <date>Fri 21 May 2021 08:40:29 PM +0530</date>
+    <tool>Eeschema 5.1.7-a382d34a8~88~ubuntu20.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Programmable Timer - Lite</title>
+        <company>SRIKit</company>
+        <rev>1.0.0</rev>
+        <date>2020-11-25</date>
+        <source>prog-timer-lite.sch</source>
+        <comment number="1" value="KT0003"/>
+        <comment number="2" value="Dilshan R Jayakody"/>
+        <comment number="3" value="https://github.com/srikit/prog-timer-lite"/>
+        <comment number="4" value="https://srikit.net"/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/prog-timer-mcu.sch/" tstamps="/5FC1E470/">
+      <title_block>
+        <title>Programmable Timer - Lite</title>
+        <company>SRIKit</company>
+        <rev>1.0.0</rev>
+        <date>2020-11-25</date>
+        <source>prog-timer-mcu.sch</source>
+        <comment number="1" value="KT0003"/>
+        <comment number="2" value="Dilshan R Jayakody"/>
+        <comment number="3" value="https://github.com/srikit/prog-timer-lite"/>
+        <comment number="4" value="https://srikit.net"/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/prog-timer-dev/" tstamps="/5FBE0212/">
+      <title_block>
+        <title>Programmable Timer - Lite</title>
+        <company>SRIKit</company>
+        <rev>1.0.0</rev>
+        <date>2020-11-25</date>
+        <source>prog-timer-dev.sch</source>
+        <comment number="1" value="KT0003"/>
+        <comment number="2" value="Dilshan R Jayakody"/>
+        <comment number="3" value="https://github.com/srikit/prog-timer-lite"/>
+        <comment number="4" value="https://srikit.net"/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U101">
+      <value>AMS1117-3.3</value>
+      <footprint>Package_TO_SOT_SMD:SOT-223-3_TabPin2</footprint>
+      <datasheet>http://www.advanced-monolithic.com/pdf/ds1117.pdf</datasheet>
+      <libsource lib="Regulator_Linear" part="AMS1117-3.3" description="1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FC1BB27</tstamp>
+    </comp>
+    <comp ref="C102">
+      <value>0.1MFD</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FC68198</tstamp>
+    </comp>
+    <comp ref="C101">
+      <value>10MFD</value>
+      <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP1" description="Polarized capacitor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FC68A9F</tstamp>
+    </comp>
+    <comp ref="C103">
+      <value>4.7MFD</value>
+      <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP1" description="Polarized capacitor, US symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FC68CD8</tstamp>
+    </comp>
+    <comp ref="J101">
+      <value>DC-IN</value>
+      <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FC6D041</tstamp>
+    </comp>
+    <comp ref="H101">
+      <value>M3 - MountingHole</value>
+      <footprint>MountingHole:MountingHole_3mm_Pad</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FC74B15</tstamp>
+    </comp>
+    <comp ref="H102">
+      <value>M3 - MountingHole</value>
+      <footprint>MountingHole:MountingHole_3mm_Pad</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FC750EA</tstamp>
+    </comp>
+    <comp ref="H103">
+      <value>M3 - MountingHole</value>
+      <footprint>MountingHole:MountingHole_3mm_Pad</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5FC7CC97</tstamp>
+    </comp>
+    <comp ref="U201">
+      <value>STM8S001J3M</value>
+      <footprint>Package_SO:SO-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>https://www.st.com/resource/en/datasheet/stm8s001j3.pdf</datasheet>
+      <libsource lib="MCU_ST_STM8" part="STM8S001J3M" description="16MHz, 8K Flash, 1K RAM, 128 EEPROM, SO-8"/>
+      <sheetpath names="/prog-timer-mcu.sch/" tstamps="/5FC1E470/"/>
+      <tstamp>5FC23B1C</tstamp>
+    </comp>
+    <comp ref="C201">
+      <value>1MFD</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP1" description="Polarized capacitor, US symbol"/>
+      <sheetpath names="/prog-timer-mcu.sch/" tstamps="/5FC1E470/"/>
+      <tstamp>5FC23B2E</tstamp>
+    </comp>
+    <comp ref="JP201">
+      <value>PROG</value>
+      <footprint>Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Jumper" description="Jumper, normally closed"/>
+      <sheetpath names="/prog-timer-mcu.sch/" tstamps="/5FC1E470/"/>
+      <tstamp>5FC23B3D</tstamp>
+    </comp>
+    <comp ref="R202">
+      <value>4.7K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/prog-timer-mcu.sch/" tstamps="/5FC1E470/"/>
+      <tstamp>5FC23B52</tstamp>
+    </comp>
+    <comp ref="R201">
+      <value>4.7K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/prog-timer-mcu.sch/" tstamps="/5FC1E470/"/>
+      <tstamp>5FC23B5F</tstamp>
+    </comp>
+    <comp ref="J201">
+      <value>ICP</value>
+      <footprint>PROG-TIMER:pogo-2.54mmx4</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/prog-timer-mcu.sch/" tstamps="/5FC1E470/"/>
+      <tstamp>5FC23B75</tstamp>
+    </comp>
+    <comp ref="Q201">
+      <value>MMBT3904</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="MMBT3904" description="0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"/>
+      <sheetpath names="/prog-timer-mcu.sch/" tstamps="/5FC1E470/"/>
+      <tstamp>5FBEAFE8</tstamp>
+    </comp>
+    <comp ref="R203">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/prog-timer-mcu.sch/" tstamps="/5FC1E470/"/>
+      <tstamp>5FBEC0FC</tstamp>
+    </comp>
+    <comp ref="J202">
+      <value>TIMER-OUT</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/prog-timer-mcu.sch/" tstamps="/5FC1E470/"/>
+      <tstamp>5FBEDFAF</tstamp>
+    </comp>
+    <comp ref="Q202">
+      <value>MMBT3904</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="MMBT3904" description="0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"/>
+      <sheetpath names="/prog-timer-mcu.sch/" tstamps="/5FC1E470/"/>
+      <tstamp>5FBF0722</tstamp>
+    </comp>
+    <comp ref="R204">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/prog-timer-mcu.sch/" tstamps="/5FC1E470/"/>
+      <tstamp>5FBF072C</tstamp>
+    </comp>
+    <comp ref="R205">
+      <value>1K</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/prog-timer-mcu.sch/" tstamps="/5FC1E470/"/>
+      <tstamp>5FBF79B8</tstamp>
+    </comp>
+    <comp ref="D201">
+      <value>RED-LED</value>
+      <footprint>LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/prog-timer-mcu.sch/" tstamps="/5FC1E470/"/>
+      <tstamp>5FBF7FD3</tstamp>
+    </comp>
+    <comp ref="C202">
+      <value>0.1MFD</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/prog-timer-mcu.sch/" tstamps="/5FC1E470/"/>
+      <tstamp>5FC45D98</tstamp>
+    </comp>
+    <comp ref="U301">
+      <value>CH340G</value>
+      <footprint>Package_SO:SOP-16_4.55x10.3mm_P1.27mm</footprint>
+      <libsource lib="CH340" part="CH340G" description="USB to serial chip"/>
+      <sheetpath names="/prog-timer-dev/" tstamps="/5FBE0212/"/>
+      <tstamp>5FBE0848</tstamp>
+    </comp>
+    <comp ref="Y301">
+      <value>12.000MHz</value>
+      <footprint>Crystal:Crystal_HC49-U_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Crystal" description="Two pin crystal"/>
+      <sheetpath names="/prog-timer-dev/" tstamps="/5FBE0212/"/>
+      <tstamp>5FBE6DE5</tstamp>
+    </comp>
+    <comp ref="C301">
+      <value>22pF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/prog-timer-dev/" tstamps="/5FBE0212/"/>
+      <tstamp>5FBE94E6</tstamp>
+    </comp>
+    <comp ref="C302">
+      <value>22pF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/prog-timer-dev/" tstamps="/5FBE0212/"/>
+      <tstamp>5FBE9B68</tstamp>
+    </comp>
+    <comp ref="J301">
+      <value>5-Pin-USB-B</value>
+      <footprint>Connector_USB:USB_Mini-B_Wuerth_65100516121_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="prog-timer-lite-rescue" part="USB_B_Mini-Connector-prog-timer-lite-rescue-prog-timer-lite-rescue" description=""/>
+      <sheetpath names="/prog-timer-dev/" tstamps="/5FBE0212/"/>
+      <tstamp>5FBF2FC8</tstamp>
+    </comp>
+    <comp ref="U302">
+      <value>DS3231M</value>
+      <footprint>Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm</footprint>
+      <datasheet>http://datasheets.maximintegrated.com/en/ds/DS3231.pdf</datasheet>
+      <libsource lib="Timer_RTC" part="DS3231M" description="Extremely Accurate I2C-Integrated RTC/TCXO/Crystal SOIC-16"/>
+      <sheetpath names="/prog-timer-dev/" tstamps="/5FBE0212/"/>
+      <tstamp>5FBF99F5</tstamp>
+    </comp>
+    <comp ref="BT301">
+      <value>BC501SM</value>
+      <footprint>PROG-TIMER:MPD_BC501SM-TR</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Battery_Cell" description="Single-cell battery"/>
+      <sheetpath names="/prog-timer-dev/" tstamps="/5FBE0212/"/>
+      <tstamp>5FC0573E</tstamp>
+    </comp>
+    <comp ref="C303">
+      <value>0.1MFD</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/prog-timer-dev/" tstamps="/5FBE0212/"/>
+      <tstamp>5FC2833F</tstamp>
+    </comp>
+    <comp ref="C304">
+      <value>0.1MFD</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/prog-timer-dev/" tstamps="/5FBE0212/"/>
+      <tstamp>5FC287F2</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="CH340" part="CH340G">
+      <description>USB to serial chip</description>
+      <docs>https://www.mpja.com/download/35227cpdata.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">CH340G</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="TX" type="output"/>
+        <pin num="3" name="RX" type="input"/>
+        <pin num="4" name="V3" type="power_in"/>
+        <pin num="5" name="D+" type="BiDi"/>
+        <pin num="6" name="D-" type="BiDi"/>
+        <pin num="7" name="XI" type="input"/>
+        <pin num="8" name="XO" type="input"/>
+        <pin num="9" name="CTS" type="output"/>
+        <pin num="10" name="DSR" type="output"/>
+        <pin num="11" name="RI" type="output"/>
+        <pin num="12" name="DCD" type="output"/>
+        <pin num="13" name="DTR" type="output"/>
+        <pin num="14" name="RTS" type="output"/>
+        <pin num="15" name="RS232" type="input"/>
+        <pin num="16" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Battery_Cell">
+      <description>Single-cell battery</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">BT</field>
+        <field name="Value">Battery_Cell</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="CP1">
+      <description>Polarized capacitor, US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Crystal">
+      <description>Two pin crystal</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Crystal*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Y</field>
+        <field name="Value">Crystal</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Jumper">
+      <description>Jumper, normally closed</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>SolderJumper*</fp>
+        <fp>Jumper*</fp>
+        <fp>TestPoint*2Pads*</fp>
+        <fp>TestPoint*Bridge*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">Jumper</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="MCU_ST_STM8" part="STM8S001J3M">
+      <description>16MHz, 8K Flash, 1K RAM, 128 EEPROM, SO-8</description>
+      <docs>https://www.st.com/resource/en/datasheet/stm8s001j3.pdf</docs>
+      <footprints>
+        <fp>SO*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">STM8S001J3M</field>
+        <field name="Footprint">Package_SO:SO-8_3.9x4.9mm_P1.27mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="PD6" type="BiDi"/>
+        <pin num="2" name="VSS" type="power_in"/>
+        <pin num="3" name="VCAP" type="passive"/>
+        <pin num="4" name="VDD" type="power_in"/>
+        <pin num="5" name="PB5" type="BiDi"/>
+        <pin num="6" name="PB4" type="BiDi"/>
+        <pin num="7" name="PC5" type="BiDi"/>
+        <pin num="8" name="PD5" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole_Pad">
+      <description>Mounting Hole with connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*Pad*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole_Pad</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="AP1117-15">
+      <aliases>
+        <alias>AP1117-18</alias>
+        <alias>AP1117-25</alias>
+        <alias>AP1117-33</alias>
+        <alias>AP1117-50</alias>
+        <alias>LD1117S33TR_SOT223</alias>
+        <alias>LD1117S12TR_SOT223</alias>
+        <alias>LD1117S18TR_SOT223</alias>
+        <alias>LD1117S25TR_SOT223</alias>
+        <alias>LD1117S50TR_SOT223</alias>
+        <alias>NCP1117-12_SOT223</alias>
+        <alias>NCP1117-1.5_SOT223</alias>
+        <alias>NCP1117-1.8_SOT223</alias>
+        <alias>NCP1117-2.0_SOT223</alias>
+        <alias>NCP1117-2.5_SOT223</alias>
+        <alias>NCP1117-2.85_SOT223</alias>
+        <alias>NCP1117-3.3_SOT223</alias>
+        <alias>NCP1117-5.0_SOT223</alias>
+        <alias>AMS1117-1.5</alias>
+        <alias>AMS1117-1.8</alias>
+        <alias>AMS1117-2.5</alias>
+        <alias>AMS1117-2.85</alias>
+        <alias>AMS1117-3.3</alias>
+        <alias>AMS1117-5.0</alias>
+      </aliases>
+      <description>1A Low Dropout regulator, positive, 1.5V fixed output, SOT-223</description>
+      <docs>http://www.diodes.com/datasheets/AP1117.pdf</docs>
+      <footprints>
+        <fp>SOT?223*TabPin2*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AP1117-15</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-223-3_TabPin2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VO" type="power_out"/>
+        <pin num="3" name="VI" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Timer_RTC" part="DS3231M">
+      <description>Extremely Accurate I2C-Integrated RTC/TCXO/Crystal SOIC-16</description>
+      <docs>http://datasheets.maximintegrated.com/en/ds/DS3231.pdf</docs>
+      <footprints>
+        <fp>SOIC*7.5x10.3mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">DS3231M</field>
+        <field name="Footprint">Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="32KHZ" type="openCol"/>
+        <pin num="2" name="VCC" type="power_in"/>
+        <pin num="3" name="~INT~/SQW" type="openCol"/>
+        <pin num="4" name="~RST" type="BiDi"/>
+        <pin num="5" name="GND" type="passive"/>
+        <pin num="6" name="GND" type="passive"/>
+        <pin num="7" name="GND" type="passive"/>
+        <pin num="8" name="GND" type="passive"/>
+        <pin num="9" name="GND" type="passive"/>
+        <pin num="10" name="GND" type="passive"/>
+        <pin num="11" name="GND" type="passive"/>
+        <pin num="12" name="GND" type="passive"/>
+        <pin num="13" name="GND" type="power_in"/>
+        <pin num="14" name="VBAT" type="power_in"/>
+        <pin num="15" name="SDA" type="BiDi"/>
+        <pin num="16" name="SCL" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_BJT" part="BC817">
+      <aliases>
+        <alias>BC818</alias>
+        <alias>BC846</alias>
+        <alias>BC847</alias>
+        <alias>BC848</alias>
+        <alias>BC849</alias>
+        <alias>BC850</alias>
+        <alias>MMBT3904</alias>
+        <alias>MMBT5550L</alias>
+        <alias>MMBT5551L</alias>
+      </aliases>
+      <description>0.8A Ic, 45V Vce, NPN Transistor, SOT-23</description>
+      <docs>https://www.onsemi.com/pub/Collateral/BC818-D.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BC817</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="prog-timer-lite-rescue" part="USB_B_Mini-Connector-prog-timer-lite-rescue-prog-timer-lite-rescue">
+      <footprints>
+        <fp>USB*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB_B_Mini-Connector-prog-timer-lite-rescue-prog-timer-lite-rescue</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBUS" type="power_out"/>
+        <pin num="2" name="D-" type="passive"/>
+        <pin num="3" name="D+" type="passive"/>
+        <pin num="4" name="ID" type="passive"/>
+        <pin num="5" name="GND" type="power_out"/>
+        <pin num="6" name="Shield" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="CH340">
+      <uri>/home/dilshan/projects/prog-timer-lite/prog-timer-lite/usb-ch34x.lib</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>/usr/share/kicad/library/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad/library/Device.lib</uri>
+    </library>
+    <library logical="MCU_ST_STM8">
+      <uri>/usr/share/kicad/library/MCU_ST_STM8.lib</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>/usr/share/kicad/library/Mechanical.lib</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>/usr/share/kicad/library/Regulator_Linear.lib</uri>
+    </library>
+    <library logical="Timer_RTC">
+      <uri>/usr/share/kicad/library/Timer_RTC.lib</uri>
+    </library>
+    <library logical="Transistor_BJT">
+      <uri>/usr/share/kicad/library/Transistor_BJT.lib</uri>
+    </library>
+    <library logical="prog-timer-lite-rescue">
+      <uri>/home/dilshan/projects/srikit-git/prog-timer-lite/design/prog-timer-lite-rescue.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="GND">
+      <node ref="J301" pin="5"/>
+      <node ref="J301" pin="6"/>
+      <node ref="C202" pin="2"/>
+      <node ref="C302" pin="2"/>
+      <node ref="C303" pin="2"/>
+      <node ref="BT301" pin="2"/>
+      <node ref="J201" pin="3"/>
+      <node ref="U201" pin="2"/>
+      <node ref="U301" pin="1"/>
+      <node ref="C201" pin="2"/>
+      <node ref="C304" pin="2"/>
+      <node ref="C301" pin="1"/>
+      <node ref="Q202" pin="2"/>
+      <node ref="U302" pin="5"/>
+      <node ref="H103" pin="1"/>
+      <node ref="H102" pin="1"/>
+      <node ref="H101" pin="1"/>
+      <node ref="U101" pin="1"/>
+      <node ref="U302" pin="10"/>
+      <node ref="U302" pin="11"/>
+      <node ref="U302" pin="12"/>
+      <node ref="J101" pin="2"/>
+      <node ref="U302" pin="13"/>
+      <node ref="U302" pin="9"/>
+      <node ref="U302" pin="8"/>
+      <node ref="Q201" pin="2"/>
+      <node ref="U302" pin="7"/>
+      <node ref="C103" pin="2"/>
+      <node ref="J202" pin="2"/>
+      <node ref="C102" pin="2"/>
+      <node ref="C101" pin="2"/>
+      <node ref="U302" pin="6"/>
+    </net>
+    <net code="2" name="+3V3">
+      <node ref="C304" pin="1"/>
+      <node ref="R201" pin="1"/>
+      <node ref="U302" pin="2"/>
+      <node ref="U301" pin="4"/>
+      <node ref="U301" pin="16"/>
+      <node ref="C202" pin="1"/>
+      <node ref="C103" pin="1"/>
+      <node ref="U101" pin="2"/>
+      <node ref="R202" pin="1"/>
+      <node ref="C303" pin="1"/>
+      <node ref="J201" pin="4"/>
+      <node ref="U201" pin="4"/>
+      <node ref="R205" pin="1"/>
+    </net>
+    <net code="3" name="Net-(C101-Pad1)">
+      <node ref="J101" pin="1"/>
+      <node ref="U101" pin="3"/>
+      <node ref="C102" pin="1"/>
+      <node ref="C101" pin="1"/>
+    </net>
+    <net code="4" name="Net-(U301-Pad13)">
+      <node ref="U301" pin="13"/>
+    </net>
+    <net code="5" name="Net-(U301-Pad14)">
+      <node ref="U301" pin="14"/>
+    </net>
+    <net code="6" name="Net-(U301-Pad15)">
+      <node ref="U301" pin="15"/>
+    </net>
+    <net code="7" name="Net-(U301-Pad12)">
+      <node ref="U301" pin="12"/>
+    </net>
+    <net code="8" name="Net-(J301-Pad4)">
+      <node ref="J301" pin="4"/>
+    </net>
+    <net code="9" name="Net-(J301-Pad1)">
+      <node ref="J301" pin="1"/>
+    </net>
+    <net code="10" name="Net-(U301-Pad9)">
+      <node ref="U301" pin="9"/>
+    </net>
+    <net code="11" name="Net-(U301-Pad10)">
+      <node ref="U301" pin="10"/>
+    </net>
+    <net code="12" name="Net-(U301-Pad11)">
+      <node ref="U301" pin="11"/>
+    </net>
+    <net code="13" name="RXD">
+      <node ref="JP201" pin="2"/>
+      <node ref="U301" pin="3"/>
+    </net>
+    <net code="14" name="TXD">
+      <node ref="U201" pin="1"/>
+      <node ref="U301" pin="2"/>
+    </net>
+    <net code="15" name="/prog-timer-dev/USB-D+">
+      <node ref="J301" pin="3"/>
+      <node ref="U301" pin="5"/>
+    </net>
+    <net code="16" name="/prog-timer-dev/USB-D-">
+      <node ref="J301" pin="2"/>
+      <node ref="U301" pin="6"/>
+    </net>
+    <net code="17" name="Net-(C301-Pad2)">
+      <node ref="U301" pin="7"/>
+      <node ref="C301" pin="2"/>
+      <node ref="Y301" pin="1"/>
+    </net>
+    <net code="18" name="Net-(C302-Pad1)">
+      <node ref="U301" pin="8"/>
+      <node ref="C302" pin="1"/>
+      <node ref="Y301" pin="2"/>
+    </net>
+    <net code="19" name="Net-(U302-Pad1)">
+      <node ref="U302" pin="1"/>
+    </net>
+    <net code="20" name="Net-(U302-Pad3)">
+      <node ref="U302" pin="3"/>
+    </net>
+    <net code="21" name="Net-(U302-Pad4)">
+      <node ref="U302" pin="4"/>
+    </net>
+    <net code="22" name="RTC-SDA">
+      <node ref="R202" pin="2"/>
+      <node ref="U302" pin="15"/>
+      <node ref="U201" pin="5"/>
+    </net>
+    <net code="23" name="RTC-SCL">
+      <node ref="U302" pin="16"/>
+      <node ref="R201" pin="2"/>
+      <node ref="U201" pin="6"/>
+    </net>
+    <net code="24" name="/prog-timer-dev/VBAT">
+      <node ref="BT301" pin="1"/>
+      <node ref="U302" pin="14"/>
+    </net>
+    <net code="25" name="Net-(J201-Pad1)">
+      <node ref="J201" pin="1"/>
+    </net>
+    <net code="26" name="Net-(C201-Pad1)">
+      <node ref="U201" pin="3"/>
+      <node ref="C201" pin="1"/>
+    </net>
+    <net code="27" name="/prog-timer-mcu.sch/UART-RXD">
+      <node ref="U201" pin="8"/>
+      <node ref="J201" pin="2"/>
+      <node ref="JP201" pin="1"/>
+    </net>
+    <net code="28" name="Net-(D201-Pad1)">
+      <node ref="Q202" pin="3"/>
+      <node ref="D201" pin="1"/>
+    </net>
+    <net code="29" name="Net-(Q202-Pad1)">
+      <node ref="R204" pin="1"/>
+      <node ref="Q202" pin="1"/>
+    </net>
+    <net code="30" name="/prog-timer-mcu.sch/OUTPUT">
+      <node ref="R203" pin="2"/>
+      <node ref="U201" pin="7"/>
+      <node ref="R204" pin="2"/>
+    </net>
+    <net code="31" name="Net-(D201-Pad2)">
+      <node ref="R205" pin="2"/>
+      <node ref="D201" pin="2"/>
+    </net>
+    <net code="32" name="Net-(Q201-Pad1)">
+      <node ref="R203" pin="1"/>
+      <node ref="Q201" pin="1"/>
+    </net>
+    <net code="33" name="Net-(J202-Pad1)">
+      <node ref="Q201" pin="3"/>
+      <node ref="J202" pin="1"/>
+    </net>
+  </nets>
+</export>
